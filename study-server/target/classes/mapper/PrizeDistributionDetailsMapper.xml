@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jd.demo.mapper.PrizeDistributionDetailsMapper">
+
+    <select id="selectByParticipantId" resultType="com.jd.demo.entity.PrizeDistributionDetails">
+        select * from prize_distribution_details where participant_id = #{participantId}
+    </select>
+    <select id="selectByTaskId" resultType="com.jd.demo.entity.PrizeDistributionDetails">
+        select * from prize_distribution_details where task_id = #{taskId}
+    </select>
+    <select id="selectByPrizeId" resultType="com.jd.demo.entity.PrizeDistributionDetails">
+        select * from prize_distribution_details where prize_id = #{prizeId}
+    </select>
+    <select id="selectAllPrizeDistributionDetails" resultType="com.jd.demo.entity.PrizeDistributionDetails">
+        select * from prize_distribution_details
+    </select>
+    <select id="selectByUnionQuery" resultType="com.jd.demo.entity.PrizeDistributionDetails">
+        select * from prize_distribution_details where participant_id = #{participantId} and task_id = #{taskId} and prize_id = #{prizeId}
+    </select>
+</mapper>

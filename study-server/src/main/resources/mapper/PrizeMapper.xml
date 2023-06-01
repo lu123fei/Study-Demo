@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jd.demo.mapper.PrizeMapper">
+    <delete id="deleteByPrizeId">
+        delete from prize where prize_id = #{prizeId}
+    </delete>
+    <delete id="deleteByPrizeName">
+        delete from prize where prize_name = #{prizeName}
+    </delete>
+
+    <select id="selectByPrizeId" resultType="com.jd.demo.entity.Prize">
+        select * from prize where prize_id = #{prizeId}
+    </select>
+    <select id="selectByPrizeName" resultType="com.jd.demo.entity.Prize">
+        select * from prize where prize_name = #{prizeName}
+    </select>
+    <select id="selectAllPrize" resultType="com.jd.demo.entity.Prize">
+        select * from prize
+    </select>
+</mapper>

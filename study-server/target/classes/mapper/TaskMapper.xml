@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jd.demo.mapper.TaskMapper">
+    <delete id="deleteByTaskId" parameterType="long">
+        delete from task where task_id = #{taskId}
+    </delete>
+    <delete id="deleteByTaskName" parameterType="string">
+        delete from task where task_name = #{taskName}
+    </delete>
+
+    <select id="selectById" parameterType="long" resultType="com.jd.demo.entity.Task">
+        select * from task where id = #{id}
+    </select>
+    <select id="selectByTaskId" parameterType="long" resultType="com.jd.demo.entity.Task">
+        select * from task where task_id = #{taskId}
+    </select>
+    <select id="selectByTaskName" parameterType="string" resultType="com.jd.demo.entity.Task">
+        select * from task where task_name = #{taskName}
+    </select>
+    <select id="selectAllTask" resultType="com.jd.demo.entity.Task">
+        select * from task
+    </select>
+</mapper>

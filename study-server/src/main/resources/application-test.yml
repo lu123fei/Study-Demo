@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://11.80.20.83:3358/b_bpop?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: zgb
+    password: jxqtest$!@666NBL
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+jimp:
+   uri: jim://2914173422341158041/110000259
+   configId: 0
+
+
